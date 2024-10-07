@@ -76,6 +76,7 @@ function TRaidLockout_OnEvent(self, event, ...)
         TRaidLockout_Init()
         TRaidLockout_SetupSavedVariableTemplate()
     elseif (event == "UPDATE_INSTANCE_INFO") then
+	TRaidLockout_ReadSavedVariableIntoLockoutData()
         TRaidLockout_UpdateLockoutData()
         TRaidLockout_GetButtonText()
         TitanPanelPluginHandle_OnUpdate({TITAN_RAIDLOCKOUT_ID, 1})
